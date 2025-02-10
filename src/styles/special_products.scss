@@ -1,0 +1,20 @@
+﻿.swiper__section{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.swiper {
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  
+  // Ожидаем, что Swiper будет добавлять дополнительные стили
+  .swiper-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .swiper__title{
+    color: #333;
+  }
+}

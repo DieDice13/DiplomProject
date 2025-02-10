@@ -1,0 +1,263 @@
+﻿@use './_vars.scss' as vars;
+
+.downloading {
+  margin: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product {
+  margin: 20px 0px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__area-user-controls {
+    display: flex;
+    padding: 10px 0;
+    margin: 20px 0;
+    border-bottom: 1px solid #E5E5E5;
+
+    .star-rating {
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+
+      li {
+        color: #5C5C5C;
+        margin-right: 5px;
+        font-size: 20px;
+        list-style: none;
+      }
+
+      li.filled {
+        color: gold; /* Цвет заполненной звезды */
+      }
+
+      p {
+        color: #9EBC21;
+      }
+    }
+
+    .add-to-favorite {
+
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 8px;
+      }
+    }
+
+  }
+
+  .product-detail {
+    display: flex;
+    justify-content: space-between;
+
+    &__img_area {
+      width: 400px; // Задаем ширину изображения
+      height: 400px; // Задаем высоту изображения
+      overflow: hidden; // Если изображение выходит за пределы, обрезаем
+    }
+
+    &__img_area img {
+      width: 100%; // Растягиваем изображение по ширине контейнера
+      height: 100%; // Растягиваем изображение по высоте контейнера
+      object-fit: contain; // Сохраняем пропорции и масштабируем изображение
+    }
+
+    &__info {
+      margin-left: 20px;
+    }
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+
+      .feature-title {
+        font-size: 15px;
+        color: #999999;
+        margin-right: 6px;
+      }
+    }
+
+    .description {
+      max-width: 400px;
+      /* или другой размер в зависимости от вашего дизайна */
+      margin: 0 auto;
+
+      &__title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      &__text {
+        overflow: hidden;
+        /* Скрывает лишний текст */
+        text-overflow: ellipsis;
+        /* Оставляет многоточие в конце */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        /* Ограничиваем 3 строками */
+        transition: max-height 0.3s ease;
+      }
+
+      &__text.expanded {
+        -webkit-line-clamp: unset;
+        /* Снимаем ограничение на количество строк */
+        overflow: visible;
+        /* Показываем весь текст */
+      }
+
+      &__toggle {
+        margin-top: 10px;
+        padding: 8px 16px;
+        background-color: #fff;
+        color: vars.$siteSelectorColor;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+      }
+
+      &__toggle:hover {
+        color: vars.$siteSelectorColorHover;
+      }
+    }
+
+    &__area-buy {
+      width: 300px;
+      height: 166px;
+      padding: 1rem;
+      border: 1px solid #ededed;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; // Приклеиваем к низу контейнера
+      height: 100%; // Чтобы кнопка была внизу, контейнер должен занимать всю доступную высоту
+
+      .old-price {
+        font-size: 20px;
+        color: #999; // Серый цвет для старой цены
+        text-decoration: line-through; // Перечеркнутая линия
+        margin: 0 0 5px 0; // Немного отступа снизу
+      }
+
+      .new-price {
+        font-size: 36px; // В два раза больше, чем старая цена
+        font-weight: bold;
+        color: #333; // Темный цвет для новой цены
+        margin: 0 0 20px 0; // Отступ снизу перед кнопкой
+      }
+
+      .sticker-discount {
+        background-color: #ff5252;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 4px 8px;
+        border-radius: 4px;
+      }
+    }
+
+    .area-buy-button {
+      height: 50px;
+      border: 1px solid #ededed;
+      display: flex;
+      justify-content: center; // Выравнивание кнопки по центру
+      margin-top: auto; // Делаем так, чтобы кнопка была прижата к низу контейнера
+
+      .go-to-cart-button {
+        background-color: white;
+        border: none;
+        width: 80%;
+
+        &__text {
+          color: black;
+        }
+      }
+      
+      .quantity-button {
+        background-color: white;
+        border: none;
+        width: 20%;
+      }
+
+      .quantity-button:hover {
+        cursor: pointer;
+        background-color: vars.$siteSelectorColorHover;
+      }
+    }
+
+    .buy-button {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: vars.$siteSelectorColorHover;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      svg {
+        margin-left: 8px;
+      }
+    }
+
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .product-detail {
+    align-items: center;
+    gap: 10px;
+    flex-direction: column; /* Для мобильных вид сверху вниз */
+  }
+
+  .product-image {
+    order: 1;
+  }
+
+  .add-to-cart {
+    order: 2; 
+  }
+
+  .product-specs {
+    order: 3; 
+  }
+}
+
+
+@media (min-width:768px) and (max-width: 1024px) {
+  .product-detail {
+    align-items: center;
+    gap: 10px;
+    flex-direction: column; /* Для мобильных вид сверху вниз */
+  }
+
+  .product-image {
+    order: 1;
+  }
+
+  .product-detail__area-buy {
+    order: 2; 
+  }
+
+  .product-detail__info {
+    order: 3; 
+  }
+}

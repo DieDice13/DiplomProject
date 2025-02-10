@@ -1,0 +1,80 @@
+@charset "UTF-8";
+a {
+  text-decoration: none;
+}
+
+.catalog__layout {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.catalog__main {
+  flex: 1;
+  /* Основное содержимое занимает оставшуюся ширину */
+}
+
+.catalog {
+  display: grid;
+}
+.catalog .catalog__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.catalog .catalog__product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 5 колонок */
+  gap: 10px;
+  /* Отступы между карточками */
+  width: 100%;
+}
+.catalog .catalog__pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  list-style: none;
+  padding: 0;
+}
+.catalog .catalog__pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.catalog .catalog__pagination li a {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #6c5ce7;
+}
+.catalog .catalog__pagination li a:hover {
+  background-color: #836fff;
+  color: white;
+}
+.catalog .catalog__pagination .catalog__pagination-active a {
+  background-color: #836fff;
+  color: white;
+}
+.catalog .catalog__pagination .catalog__pagination-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (width: 768px) {
+  .catalog__product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (width: 1024px) {
+  .catalog__product-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+@media (min-width: 320px) and (max-width: 425px) {
+  .catalog__layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .catalog__product-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}/*# sourceMappingURL=catalog.css.map */

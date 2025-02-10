@@ -1,0 +1,54 @@
+.auth {
+  margin: 40px 0;
+}
+.auth__title {
+  margin-bottom: 20px;
+}
+.auth form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.auth form input {
+  padding: 10px;
+  width: 650px;
+}
+.auth form button {
+  width: auto;
+  padding: 10px;
+  margin: 10px 0;
+}
+.auth form .auth__actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.auth form .auth__actions .btn-submit {
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: #6c5ce7;
+}
+.auth form .auth__actions .btn-submit:hover {
+  background-color: #836fff;
+}
+.auth form .auth__actions .auth__toggle--login, .auth form .auth__actions .auth__toggle--register {
+  border: none;
+  color: #6c5ce7;
+  display: inline-block;
+  background-color: white;
+  border-bottom: 1px dotted #6c5ce7;
+  cursor: pointer;
+  padding: 6px;
+}
+.auth .btn-exit {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: #6c5ce7;
+}
+.auth .btn-exit:hover {
+  background-color: #836fff;
+}/*# sourceMappingURL=auth.css.map */

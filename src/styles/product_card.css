@@ -1,0 +1,143 @@
+@charset "UTF-8";
+.product-card {
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 420px; /* Это высота для общей карточки */
+  box-sizing: border-box;
+  /* Блок с количеством товаров */
+}
+.product-card .product-card__title {
+  margin: 10px 0px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.product-card:hover .product-card__title {
+  color: #836fff;
+}
+.product-card .img_area {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-card .img_area img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  height: 100%;
+}
+.product-card .sticker-discount {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #ff5252;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.product-card .favorite-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.product-card .favorite-icon:hover {
+  transform: scale(1.2);
+}
+.product-card .price-block {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  gap: 8px;
+}
+.product-card .price-block .old-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+.product-card .price-block .new-price {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+.product-card__quantity {
+  position: absolute; /* Абсолютное позиционирование */
+  bottom: 10px; /* Снизу */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.product-card__quantity button {
+  padding: 0 28px;
+  background-color: #6c5ce7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.product-card__quantity button:hover {
+  background-color: #836fff;
+}
+.product-card__quantity button:active {
+  background-color: #836fff;
+}
+.product-card__quantity span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  min-width: 24px;
+  text-align: center;
+}
+.product-card .add-to-cart-btn {
+  position: absolute;
+  bottom: 10px; /* Добавляем отступ снизу */
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.product-card .add-to-cart-btn:hover {
+  transform: scale(1.2);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-card__title {
+    font-size: 16px !important;
+  }
+  .old-price {
+    font-size: 10px !important;
+  }
+  .new-price {
+    font-size: 14px !important;
+  }
+}/*# sourceMappingURL=product_card.css.map */

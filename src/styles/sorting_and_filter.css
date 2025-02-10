@@ -1,0 +1,43 @@
+.sorting-and-filters .catalog__sorting {
+  background-color: white;
+}
+.sorting-and-filters .catalog__sorting select:hover {
+  border-color: #cd89d5;
+}
+.sorting-and-filters .catalog__sorting select:focus {
+  border-color: #cd89d5;
+  outline: none;
+}
+.sorting-and-filters .catalog__sorting select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+.sorting-and-filters .filters .filter-item {
+  border-bottom: 1px solid #cacaca;
+}
+.sorting-and-filters .filters .filter-header {
+  cursor: pointer;
+  padding: 15px 10px;
+  font-weight: bold;
+  color: #4E4E4E;
+}
+.sorting-and-filters .filters .filter-options label {
+  display: flex;
+  margin-bottom: 5px;
+  gap: 10px;
+  cursor: pointer;
+}
+.sorting-and-filters .filters .reset-filters-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}/*# sourceMappingURL=sorting_and_filter.css.map */

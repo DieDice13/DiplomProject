@@ -1,0 +1,63 @@
+﻿.promotions-wrapper {
+  // Стандартное отображение - сетка
+  .promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Три столбца
+    gap: 20px;
+
+    &__item {
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  // Настройки для Swiper слайдера
+  .promotions-slider {
+    display: none; // По умолчанию слайдер скрыт
+
+    &__image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+// Адаптивный дизайн для телефонов
+@media (max-width: 768px) {
+  .promotions-wrapper {
+    .promotions-grid {
+      display: none; // Скрыть сетку
+    }
+
+    .promotions-slider {
+      display: block; // Показать слайдер
+    }
+  }
+}
+
+// Стандартное отображение для любых разрешений
+@media (min-width: 769px) {
+  .promotions-wrapper {
+    .promotions-slider {
+      display: none; // Скрыть слайдер
+    }
+
+    .promotions-grid {
+      display: grid; // Показать сетку
+    }
+  }
+}

@@ -1,0 +1,44 @@
+﻿.brands {
+    &__title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr); /* 8 элементов в ряд для больших экранов */
+        gap: 10px;
+        justify-items: center;
+        align-items: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    .brands-slider {
+        display: none;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+    }
+}
+
+// Адаптивный дизайн
+@media (max-width: 768px) {
+    .brands {
+        &__items {
+            display: none; // Скрыть сетку на мобильных устройствах
+        }
+
+        .brands-slider {
+            display: block; // Показать слайдер
+        }
+    }
+}

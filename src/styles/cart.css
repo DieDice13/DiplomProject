@@ -1,0 +1,108 @@
+@charset "UTF-8";
+.cart {
+  display: flex; /* Используем flexbox для распределения контента */
+  flex-direction: column;
+  gap: 20px;
+}
+.cart__content {
+  display: flex;
+  justify-content: space-between;
+}
+.cart__grid {
+  width: 50%; /* Левая часть */
+  display: flex;
+  flex-direction: column; /* Располагаем товары в столбик */
+  gap: 20px; /* Отступы между товарами */
+}
+.cart__summary {
+  width: 40%; /* Правая часть */
+  background: #f8f8f8; /* Светлый фон для выделения */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cart__product {
+  display: flex;
+  gap: 20px;
+  align-items: center; /* Для выравнивания внутри элемента */
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.cart__product-card {
+  flex: 1; /* Карточка продукта занимает основное место */
+}
+.cart__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cart__product-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart__product-quantity button {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.cart__product-quantity button:hover {
+  background: #f0f0f0;
+}
+.cart__product-quantity span {
+  font-weight: bold;
+}
+.cart__product-remove {
+  color: #ff4d4d;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+.cart__product-remove:hover {
+  color: #ff0000;
+}
+.cart__summary {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+}
+.cart__order-button {
+  padding: 10px 20px;
+  background: #6c5ce7;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.cart__order-button:hover {
+  background: #836fff;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .cart__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cart__content .cart__grid {
+    width: 100%;
+  }
+  .cart__content .cart__summary {
+    width: 100%;
+    height: 210px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cart__summary {
+    height: 190px;
+  }
+}/*# sourceMappingURL=cart.css.map */

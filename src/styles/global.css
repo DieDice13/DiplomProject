@@ -1,0 +1,28 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Добавляем box-sizing для лучшего управления размерами элементов */
+}
+
+.body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding-left: 14vw;
+  padding-right: 14vw;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding-left: 10vw; /* Уменьшаем отступы для устройств с меньшими экранами */
+    padding-right: 10vw;
+  }
+}
+@media (min-width: 320px) and (max-width: 425px) {
+  .container {
+    padding-left: 5vw; /* Еще меньше отступы для мобильных устройств */
+    padding-right: 5vw;
+  }
+}/*# sourceMappingURL=global.css.map */

@@ -1,0 +1,180 @@
+﻿@use './_vars.scss' as vars;
+
+.product-reviews {
+    
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    .write-review {
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: vars.$siteSelectorColor;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: vars.$siteSelectorColorHover;
+        }
+    }
+
+    .login-prompt {
+        font-size: 14px;
+    }
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    width: 500px;
+    padding: 30px 20px;
+    position: relative;
+
+    .form-close-btn {
+        border: none;
+        background-color: #f7f7f7;
+        color: vars.$siteSelectorColor;
+        padding: 8px 12px;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .rating-group {
+
+        .rating-stars {
+            display: flex;
+            gap: 6px;
+            
+            .star {
+                color: #d5d5d5;
+                font-size: 30px;
+                cursor: pointer;
+
+                &.filled {
+                    color: gold; 
+                }
+        
+            }
+        }
+    }
+
+    .name-email-group {
+        display: flex;
+        justify-content: space-between;
+
+        & input {
+            padding: 12px 22px;
+        }
+    }
+
+    .review-group {
+        width: 100%;
+
+        & textarea {
+            height: 120px;
+            padding: 12px 30px;
+        }
+    }
+}
+
+.submit-review {
+    border: none;
+    color: white;
+    background-color: vars.$siteSelectorColor;
+    padding: 10px 20px;
+}
+
+.submit-review:hover {
+    background-color: vars.$siteSelectorColorHover;
+    cursor: pointer;
+
+}
+
+.name-form, .email-form, .review-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.name-form input, .email-form input, .review-group textarea {
+    border: none;
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .product-review {
+        padding: 6px;
+        border-bottom: 1px solid #e0e0e0;
+
+        .autor-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            .review-meta {
+                display: flex;
+                flex-direction: column;
+
+                .star {
+                    font-size: 20px;
+                    /* Размер звезд */
+                    margin-right: 2px;
+                    /* Расстояние между звездами */
+                }
+
+                .star.filled {
+                    color: gold;
+                    /* Цвет закрашенной звезды */
+                }
+
+                .star.empty {
+                    color: #D5D5D5;
+                    /* Цвет незакрашенной звезды */
+                }
+
+            }
+
+
+
+            .review-rating {
+                display: flex;
+                gap: 6px;
+                font-size: 20px;
+                flex-direction: row-reverse;
+            }
+        }
+
+        .review-comment {
+            padding: 6px 0px;
+        }
+
+        .review-header {
+            font-size: 10px;
+
+            .review-author {
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+
+}

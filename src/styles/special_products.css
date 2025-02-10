@@ -1,0 +1,17 @@
+.swiper__section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.swiper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.swiper .swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+.swiper .swiper__title {
+  color: #333;
+}/*# sourceMappingURL=special_products.css.map */

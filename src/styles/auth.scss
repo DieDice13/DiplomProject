@@ -1,0 +1,66 @@
+﻿@use './_vars.scss' as vars;
+
+.auth {
+    margin: 40px 0;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input {
+            padding: 10px;
+            width: 650px;
+        }
+
+        button {
+            width: auto;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .auth__actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .btn-submit {
+                border: none;
+                cursor: pointer;
+                color: white;
+                background-color: vars.$siteSelectorColor;
+            }
+
+            .btn-submit:hover {
+                background-color: vars.$siteSelectorColorHover;
+            }
+
+            .auth__toggle--login, .auth__toggle--register {
+                border: none;
+                color: vars.$siteSelectorColor;
+                display: inline-block;
+                background-color: white;
+                border-bottom: 1px dotted vars.$siteSelectorColor;
+                cursor: pointer;
+                padding: 6px;
+            }
+        }
+    }
+
+    .btn-exit {
+        margin-top: 20px;
+        padding: 10px 15px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        background-color: vars.$siteSelectorColor;
+    }
+
+    .btn-exit:hover {
+        background-color: vars.$siteSelectorColorHover
+    }
+}
